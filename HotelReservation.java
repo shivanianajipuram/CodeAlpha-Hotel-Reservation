@@ -110,6 +110,7 @@ public class HotelReservation{
         Confirmation obj1=new Confirmation();
         System.out.println("Welcome to our hotel..");
         System.out.println("Please read the options below..");
+        obj1.roomsInitialize();
     while (true) {
             System.out.println("Enter your Choice: ");
             System.out.println("1. Display available rooms");
@@ -118,10 +119,8 @@ public class HotelReservation{
             System.out.println("4. Exit");        
             Scanner s=new Scanner(System.in);
            int choice =s.nextInt();
-
         switch(choice){
         case 1:
-        obj1.roomsInitialize();
         obj1.availableRooms();
         break;
         case 2:
