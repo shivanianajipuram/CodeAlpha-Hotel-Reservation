@@ -84,7 +84,8 @@ class Confirmation{
             if(r.RoomsAvailablility() && r.getroomnumb()==roomId ){
                 Reservation c1=new Reservation(CustomerName, numbofnights, r);
                 reservationsArrayList.add(c1);
-                System.out.println("Your reservation is Successfull!!"+c1.getroomId()+" is your room Identification number");
+                System.out.println("Your reservation is Successfull!!");
+                System.out.println(c1.getroomId()+ "   is your room Identification number");
                return;
             }
         }
@@ -99,9 +100,7 @@ class Confirmation{
             System.out.println("Number of nights: "+r.getNumbofnights());
             System.out.println("Total price $"+r.getTotalprice());
         }
-        else{
-        System.out.println("Booking Not found");}
-        }
+    }
 }
 }
 
@@ -112,10 +111,10 @@ public class HotelReservation{
         System.out.println("Please read the options below..");
         obj1.roomsInitialize();
     while (true) {
-            System.out.println("Enter your Choice: ");
-            System.out.println("1. Display available rooms");
+            System.out.println("Enter your Option: ");
+            System.out.println("1. For Available rooms");
             System.out.println("2. Make a reservation");
-            System.out.println("3. Display reservation details");
+            System.out.println("3. For reservation details");
             System.out.println("4. Exit");        
             Scanner s=new Scanner(System.in);
            int choice =s.nextInt();
